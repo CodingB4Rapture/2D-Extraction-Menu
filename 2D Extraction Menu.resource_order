@@ -1,0 +1,20 @@
+{
+  "FolderOrderSettings":[
+    {"name":"fonts","order":1,"path":"folders/Initial Menu Objects/fonts.yy",},
+    {"name":"menu sprites","order":2,"path":"folders/Initial Menu Objects/menu sprites.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"Header_font","order":1,"path":"fonts/Header_font/Header_font.yy",},
+    {"name":"UI_font","order":2,"path":"fonts/UI_font/UI_font.yy",},
+    {"name":"menu_back_arrow","order":5,"path":"sprites/menu_back_arrow/menu_back_arrow.yy",},
+    {"name":"menu_column_header","order":7,"path":"sprites/menu_column_header/menu_column_header.yy",},
+    {"name":"menu_column_panel","order":6,"path":"sprites/menu_column_panel/menu_column_panel.yy",},
+    {"name":"menu_dropdown_box","order":12,"path":"sprites/menu_dropdown_box/menu_dropdown_box.yy",},
+    {"name":"menu_setting_slider","order":9,"path":"sprites/menu_setting_slider/menu_setting_slider.yy",},
+    {"name":"menu_settings_knob","order":10,"path":"sprites/menu_settings_knob/menu_settings_knob.yy",},
+    {"name":"menu_UI_Button","order":1,"path":"sprites/menu_UI_Button/menu_UI_Button.yy",},
+    {"name":"menu_UI_checkbox","order":8,"path":"sprites/menu_UI_checkbox/menu_UI_checkbox.yy",},
+    {"name":"menu_UI_Left_Panel","order":2,"path":"sprites/menu_UI_Left_Panel/menu_UI_Left_Panel.yy",},
+    {"name":"menu_UI_Right_Panel","order":3,"path":"sprites/menu_UI_Right_Panel/menu_UI_Right_Panel.yy",},
+  ],
+}
