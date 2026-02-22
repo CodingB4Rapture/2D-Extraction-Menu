@@ -7,16 +7,16 @@ if (menu_screen == MenuScreen.MAIN)
 	draw_set_valign(fa_top);
 
 	//Shadow
-	draw_set_color(c_silver);
+	draw_set_color(c_dkgray);
 	draw_text(title_x + 2, title_y + 2, title_text); 
 
 	//main
-	draw_set_color(c_olive);
+	draw_set_color(c_silver);
 	draw_text(title_x, title_y, title_text); 
 
 	// Main menu background panels (used to be on room asset layer)
-	draw_sprite(menu_UI_Left_Panel,  0,  64, 128);
-	draw_sprite(menu_UI_Right_Panel, 0, 624, 128);
+	draw_sprite(menu_UI_Left_Panel,  0,  60, 136);
+	draw_sprite(menu_UI_Right_Panel, 0, 624, 136);
 	// Draw all buttons
 	for (var button_index = 0; button_index < array_length(buttons); button_index++)
 	{
@@ -30,7 +30,7 @@ if (menu_screen == MenuScreen.MAIN)
 	    var draw_x = button.x;
 	    var draw_y = button.y;
 
-	    if (is_hovered) draw_y += 2;
+	    if (is_hovered) draw_y += -4;
 
 	    draw_sprite(button.spr, frame, draw_x, draw_y);
 
@@ -44,7 +44,7 @@ if (menu_screen == MenuScreen.MAIN)
 	    draw_set_color(c_black);
 	    draw_text(center_x + 2, center_y + 2, button.label);
 
-	    draw_set_color(c_orange);
+	    draw_set_color(c_silver);
 	    draw_text(center_x, center_y, button.label);
 	}
 
@@ -63,7 +63,8 @@ if (menu_screen == MenuScreen.MAIN)
 	draw_set_font(UI_font);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
-	draw_set_color(c_ltgrey);
+	draw_set_color(c_silver); //UI text
+
 
 	draw_set_font(UI_font);
 	draw_set_font(description_font);
@@ -80,11 +81,11 @@ if (menu_screen == MenuScreen.MAIN)
 	draw_set_valign(fa_bottom);
 
 	//Shadow
-	draw_set_color(c_silver);
+	draw_set_color(c_dkgray);
 	draw_text(footer_x + 2, footer_y + 2, footer_text); 
 
 	//main
-	draw_set_color(c_olive);
+	draw_set_color(c_silver);
 	draw_text(footer_x, footer_y, footer_text); 
 }
 else if (menu_screen == MenuScreen.SETTINGS)
@@ -98,11 +99,11 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	draw_set_valign(fa_top);
 
 	//Shadow
-	draw_set_color(c_silver);
+	draw_set_color(c_dkgrey);
 	draw_text(title_x + 2, title_y + 2, title_text); 
 
 	//main
-	draw_set_color(c_olive);
+	draw_set_color(c_silver);
 	draw_text(title_x, title_y, title_text); 
     // --- Panels (your "columns") ---
 // --- SETTINGS COLUMN PLACEMENT (visual scaffolding only) ---
@@ -141,7 +142,7 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	draw_sprite(menu_column_header, 0, fourth_header_x, column_header_y); 
 	
 	//Shadow
-	draw_set_color(c_dkgray);
+	draw_set_color(c_dkgrey);
 	draw_text(first_header_x - 70, column_header_y - 28, "AUDIO"); 
 	draw_text(second_header_x - 102, column_header_y - 28, "GRAPHICS"); 
 	
@@ -150,7 +151,7 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	
     
 	draw_set_font(UI_font);
-	draw_set_color(c_orange);
+	draw_set_color(c_silver);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	
@@ -168,11 +169,11 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	draw_set_valign(fa_bottom);
 
 	//Shadow
-	draw_set_color(c_silver);
+	draw_set_color(c_dkgrey);
 	draw_text(footer_x + 2, footer_y + 2, footer_text); 
 
 	//main
-	draw_set_color(c_olive);
+	draw_set_color(c_silver);
 	draw_text(footer_x, footer_y, footer_text); 
 	
 	// --- BACK button ---

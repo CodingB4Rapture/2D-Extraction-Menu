@@ -20,7 +20,6 @@
   "height":72,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"8f8b9b9f-ea24-4dad-a351-40e7b21e1a15","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"8f8b9b9f-ea24-4dad-a351-40e7b21e1a15","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"9811f67c-6cf6-423f-b189-476cd848854c","blendMode":0,"displayName":"default","isLocked":false,"name":"9811f67c-6cf6-423f-b189-476cd848854c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"menu_UI_Button",
