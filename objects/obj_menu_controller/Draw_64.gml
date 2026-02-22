@@ -8,11 +8,11 @@ if (menu_screen == MenuScreen.MAIN)
 
 	//Shadow
 	draw_set_color(c_dkgray);
-	draw_text(title_x + 2, title_y + 2, title_text); 
+	draw_text(title_x + 2, title_y + 30, title_text); 
 
 	//main
 	draw_set_color(c_silver);
-	draw_text(title_x, title_y, title_text); 
+	draw_text(title_x, title_y + 32, title_text); 
 
 	// Main menu background panels (used to be on room asset layer)
 	draw_sprite(menu_UI_Left_Panel,  0,  60, 136);
@@ -100,11 +100,11 @@ else if (menu_screen == MenuScreen.SETTINGS)
 
 	//Shadow
 	draw_set_color(c_dkgrey);
-	draw_text(title_x + 2, title_y + 2, title_text); 
+	draw_text(title_x + 2, title_y + 30, title_text); 
 
 	//main
 	draw_set_color(c_silver);
-	draw_text(title_x, title_y, title_text); 
+	draw_text(title_x, title_y + 32, title_text); 
     // --- Panels (your "columns") ---
 // --- SETTINGS COLUMN PLACEMENT (visual scaffolding only) ---
 	// SETTINGS text defaults (everything in this screen starts from here)

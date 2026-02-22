@@ -5,7 +5,7 @@ title_x = 1280 * 0.5; //this will center my X axis
 title_y = 12; //top padding 
 title_scale = 2;
 //For the footer of main menu
-footer_text = "Remember the Mission, Return Safely.";
+footer_text = "Remember the Mission.";
 footer_x = 1280 * 0.5; //center on x axis yet again for footer
 footer_y = 672;
 
