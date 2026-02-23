@@ -128,7 +128,7 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 	var knob_right  = knob_left + knob_width;
 	var knob_bottom = knob_top + knob_height;
 
-var mouse_over_knob =
+	var mouse_over_knob =
     (mouse_x_gui >= knob_left) && (mouse_x_gui < knob_right) &&
     (mouse_y_gui >= knob_top)  && (mouse_y_gui < knob_bottom);
 

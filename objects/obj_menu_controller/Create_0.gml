@@ -52,7 +52,6 @@ buttons = [
 		description: "Go on a Deployment.",
 		action: MenuAction.PLAY_GAME
 	},
-	
 	{ // Loudout button
 		spr: menu_UI_Button,
 		x: 80, y: 240,
@@ -62,7 +61,6 @@ buttons = [
 		description: "Go your loadout, see what you want to bring with you.",
 		action: MenuAction.LOADOUT
 	},
-	
 	{ // Settings Button
 		spr: menu_UI_Button,
 		x: 80, y: 320,
@@ -72,7 +70,6 @@ buttons = [
 		description: "Adjust your game and sound settings.",
 		action: MenuAction.SETTINGS
 	},
-	
 	{ //About Our Team button
 		spr: menu_UI_Button,
 		x: 80, y: 400,
@@ -82,7 +79,7 @@ buttons = [
 		description: " \tBushcrafter:\n \n Resourceful Hunter \n\n \tMechanic:\n\n Clunky Scrapper and fixerupper \n\n \tMedic: \n\n Hopefully they'll heal you.",
 		action: MenuAction.ABOUT_OUR_TEAM
 	},
-	{
+	{ //Quit Button
 		spr: menu_UI_Button,
 		x: 80, y: 480,
 		width: sprite_get_width(menu_UI_Button),
