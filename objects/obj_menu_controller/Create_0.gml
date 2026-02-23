@@ -4,7 +4,7 @@ title_text = "2D EXTRACTION TO EIRENE"; //change to final name later
 title_x = 1280 * 0.5; //this will center my X axis 
 title_y = 12; //top padding 
 title_scale = 2;
-//For the footer of main menu
+//For the footer of main menu/other screens if I want it there
 footer_text = "Remember the Mission.";
 footer_x = 1280 * 0.5; //center on x axis yet again for footer
 footer_y = 672;
@@ -22,7 +22,7 @@ back_button_x = 48;
 back_button_y = 32;
 back_button_width = sprite_get_width(menu_back_arrow);
 back_button_height = sprite_get_height(menu_back_arrow); 
-back_button_label = "BACK";
+back_button_label = "BACK"; //didnt end up using label.. arrow is kind of self-explanitory
 
 enum MenuAction {PLAY_GAME, LOADOUT, SETTINGS, ABOUT_OUR_TEAM, QUIT}
 
@@ -30,7 +30,7 @@ enum MenuAction {PLAY_GAME, LOADOUT, SETTINGS, ABOUT_OUR_TEAM, QUIT}
 hovered_button_index = -1; 
 selected_button_index = -1; 
 
-//button list
+//button list for main menu screen for first initial screen
 buttons = [
 	{ //Deploy button
 		spr: menu_UI_Button,

@@ -122,7 +122,7 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	var third_panel_x = panel_x_start + panel_padding * 2;
 	var fourth_panel_x = panel_x_start + panel_padding * 3;
 
-	// Panels (your "columns")
+	// column panels
 	draw_sprite(menu_column_panel, 0, first_panel_x, panel_y);
 	draw_sprite(menu_column_panel, 0, second_panel_x, panel_y);
 	draw_sprite(menu_column_panel, 0, third_panel_x, panel_y);
@@ -135,11 +135,19 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	var second_header_x = column_header_x_start + panel_padding;
 	var third_header_x = column_header_x_start + panel_padding * 2;
 	var fourth_header_x = column_header_x_start + panel_padding * 3;
-	
+	// column headers
 	draw_sprite(menu_column_header, 0, first_header_x, column_header_y);
 	draw_sprite(menu_column_header, 0, second_header_x, column_header_y); 
 	draw_sprite(menu_column_header, 0, third_header_x, column_header_y); 
 	draw_sprite(menu_column_header, 0, fourth_header_x, column_header_y); 
+	
+	//Music Coloumn 
+	var master_volume_slider_y = 208;
+	var master_volume_slider_x = 198;
+	
+	//drawing the sprites 
+	draw_sprite(menu_setting_slider, 0, master_volume_slider_x, master_volume_slider_y);
+	
 	
 	//Shadow
 	draw_set_color(c_dkgrey);
@@ -147,7 +155,7 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	draw_text(second_header_x - 102, column_header_y - 28, "GRAPHICS"); 
 	
 	draw_text(third_header_x - 110, column_header_y - 28, "CONTROLS"); 
-	draw_text(fourth_header_x - 42, column_header_y - 28, "ETC."); 
+	draw_text(fourth_header_x - 70, column_header_y - 28, "ACCESS"); 
 	
     
 	draw_set_font(UI_font);
@@ -161,7 +169,7 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	draw_text(second_header_x - 104, column_header_y - 28, "GRAPHICS"); 
 	
 	draw_text(third_header_x - 112, column_header_y - 28, "CONTROLS"); 
-	draw_text(fourth_header_x - 44, column_header_y - 28, "ETC."); 
+	draw_text(fourth_header_x - 72, column_header_y - 28, "ACCESS"); 
 	
 	//Draw game title
 	draw_set_font(Header_font); 
