@@ -81,4 +81,68 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 	    exit;
 	}
 		//Settings INPUT will go here (Checkboxes and sliders)
+	// ===========================================
+	// MASTER VOLUME SLIDER INPUT (click + drag)
+	// ===========================================
+
+	// 1) Read mouse position in GUI space (because menus are GUI)
+	var mouse_x_gui = device_mouse_x_to_gui(0);
+	var mouse_y_gui = device_mouse_y_to_gui(0);
+
+	// 2) Slider bar position (must match your Draw positions)
+	var bar_x = 198;
+	var bar_y = 208;
+
+	// 3) Get sprite sizes (so we can calculate track + hitboxes)
+	var bar_width  = sprite_get_width(menu_setting_slider);
+	var bar_height  = sprite_get_height(menu_setting_slider);
+
+	var knob_width = sprite_get_width(menu_settings_knob);
+	var knob_height = sprite_get_height(menu_settings_knob);
+
+	// 4) Convert the stored value (0..1.20) into a travel percent (0..1)
+	var travel_percent = (master_value - master_min) / (master_max - master_min);
+	travel_percent = clamp(travel_percent, 0, 1);
+
+	// 5) Define the slider TRACK where the knob center is allowed to move
+	//    (This prevents the knob from hanging off the bar edges)
+	var track_left_center  = bar_x + knob_width * 0.5;
+	var track_right_center = bar_x + bar_width - knob_width * 0.5;
+
+	// 6) Find the knob CENTER position based on the travel percent
+	var knob_center_x = lerp(track_left_center, track_right_center, travel_percent);
+	var knob_center_y = bar_y + bar_height * 0.5;
+
+	// 7) Convert knob center -> knob draw position (top-left-ish),
+	//    then apply your custom offsets so it visually lines up with your art
+	var knob_draw_x = knob_center_x - knob_width * 0.5 + sprite_get_xoffset(menu_settings_knob) + master_knob_x_offset;
+	var knob_draw_y = knob_center_y - knob_height * 0.5 + sprite_get_yoffset(menu_settings_knob) + master_knob_y_offset;
+
+	// 8) Check if the mouse is currently over the knob (clickable area)
+	var mouse_over_knob =
+	    (mouse_x_gui >= knob_draw_x) && (mouse_x_gui < knob_draw_x + knob_width) &&
+	    (mouse_y_gui >= knob_draw_y) && (mouse_y_gui < knob_draw_y + knob_height);
+
+	// 9) Start dragging only if the user clicks ON the knob
+	if (mouse_over_knob && mouse_check_button_pressed(mb_left))
+	{
+	    master_dragging = true;
+	}
+
+	// 10) Stop dragging when the mouse button is released
+	if (!mouse_check_button(mb_left))
+	{
+	    master_dragging = false;
+	}
+
+	// 11) While dragging, map mouse X position back into a new slider value
+	if (master_dragging)
+	{
+	    // Convert mouse X into 0..1 across the track
+	    var new_percent = (mouse_x_gui - track_left_center) / (track_right_center - track_left_center);
+	    new_percent = clamp(new_percent, 0, 1);
+
+	    // Convert 0..1 percent into actual value 0..1.20
+	    master_value = lerp(master_min, master_max, new_percent);
+	}
 }

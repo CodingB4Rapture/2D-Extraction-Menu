@@ -142,27 +142,43 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	draw_sprite(menu_column_header, 0, fourth_header_x, column_header_y); 
 	
 	//Music Coloumn 
-	var master_volume_slider_y = 208;
-	var master_volume_slider_x = 198;
+	// --- MASTER VOLUME SLIDER (AUDIO column) ---
+
+	// 1) BAR anchor (THIS stays constant)
+	var master_bar_x = 198;
 	var master_bar_y = 208;
-	var master_bar_x = 108;
-	//convert value for 0-1.20 into a 0..1 travel percentage to move knob
+
+	// 2) Convert master_value (0..1.20) into knob travel (0..1)
 	var knob_travel = (master_value - master_min) / (master_max - master_min);
-	knob_travel = clamp(knob_travel, 0, 1); 
+	knob_travel = clamp(knob_travel, 0, 1);
+
+	// 3) Track limits (knob stays on the bar)
+	var bar_width  = sprite_get_width(menu_setting_slider);
+	var bar_height = sprite_get_height(menu_setting_slider);
 	
-	//getting the width of var and knob
-	var bar_width = sprite_get_width(menu_setting_slider);
-	var knob_width = sprite_get_width(menu_settings_knob); 
-	//tracking limits so know doesn't hangoff the ends 
-	var track_left = master_bar_x;
-	var track_right = master_bar_x + bar_width - knob_width;
-	//knob positions based on slider values
-	var master_knob_x = lerp(track_left, track_right, knob_travel);
-	var master_knob_y = master_bar_y;
+	var knob_width = sprite_get_width(menu_settings_knob);
+	var knob_height = sprite_get_height(menu_settings_knob);
 	
-	//drawing the sprites 
+	var track_left  = master_bar_x + knob_width * 0.5;
+	var track_right = master_bar_x + bar_width - knob_width * 0.5;
+	
+	//knob center positioning
+	var knob_center_x = lerp(track_left, track_right, knob_travel);
+	var knob_center_y = master_bar_y + bar_height * 0.5; 
+	
+	//convert center to draw position that respects bars placement
+	var knob_draw_x = knob_center_x - knob_width * 0.5 + sprite_get_xoffset(menu_settings_knob);
+	var knob_draw_y = knob_center_y - knob_height * 0.5 + sprite_get_yoffset(menu_settings_knob); 
+	// Tweak this until it sits perfectly on the bar
+	var knob_y_offset = -8;   // try -6, then adjust: -4, -8, etc.
+	knob_draw_y += knob_y_offset;
+	var knob_x_offset = -100;
+	knob_draw_x += knob_x_offset;
+
+	// 5) Draw
 	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y);
-	draw_sprite(menu_settings_knob, 0, master_knob_x, master_knob_y); 
+	draw_sprite(menu_settings_knob, 0, knob_draw_x, knob_draw_y);
+	 
 	
 	//Shadow
 	draw_set_color(c_dkgrey);

@@ -1,5 +1,8 @@
 display_set_gui_size(1280, 720);
 
+//store the offsets i found so my step + draw use the same values
+master_knob_x_offset = -100; 
+master_knob_y_offset = -8;
 //Sound Settings
 master_min = 0.0; 
 master_max = 1.20; 
