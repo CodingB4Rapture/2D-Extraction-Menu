@@ -5,10 +5,9 @@ master_knob_x_offset = -100;
 master_knob_y_offset = -8;
 //Sound Settings
 master_min = 0.0; 
-master_max = 1.20; 
-master_value = 0.00;
+master_max = 1.00; 
 master_dragging = false; 
-
+master_value = clamp(audio_get_master_gain(0), master_min, master_max);
 
 
 title_text = "2D EXTRACTION TO EIRENE"; //change to final name later

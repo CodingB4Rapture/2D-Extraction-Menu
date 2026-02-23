@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"loop_track",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":36.59,
+  "exportDir":"",
+  "name":"loop_track",
+  "parent":{
+    "name":"2D Extraction Menu",
+    "path":"2D Extraction Menu.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"loop_track.wav",
+  "volume":1.0,
+}

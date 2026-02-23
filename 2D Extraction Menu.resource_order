@@ -6,6 +6,11 @@
   "ResourceOrderSettings":[
     {"name":"Header_font","order":1,"path":"fonts/Header_font/Header_font.yy",},
     {"name":"UI_font","order":2,"path":"fonts/UI_font/UI_font.yy",},
+    {"name":"obj_audio_controller","order":5,"path":"objects/obj_audio_controller/obj_audio_controller.yy",},
+    {"name":"rm_eirene","order":7,"path":"rooms/rm_eirene/rm_eirene.yy",},
+    {"name":"rm_world","order":8,"path":"rooms/rm_world/rm_world.yy",},
+    {"name":"music_set","order":6,"path":"scripts/music_set/music_set.yy",},
+    {"name":"loop_track","order":4,"path":"sounds/loop_track/loop_track.yy",},
     {"name":"menu_back_arrow","order":5,"path":"sprites/menu_back_arrow/menu_back_arrow.yy",},
     {"name":"menu_column_header","order":7,"path":"sprites/menu_column_header/menu_column_header.yy",},
     {"name":"menu_column_panel","order":6,"path":"sprites/menu_column_panel/menu_column_panel.yy",},

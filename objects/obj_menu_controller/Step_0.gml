@@ -103,7 +103,9 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 	// 4) Convert the stored value (0..1.20) into a travel percent (0..1)
 	var travel_percent = (master_value - master_min) / (master_max - master_min);
 	travel_percent = clamp(travel_percent, 0, 1);
-
+	// Step event (right after you update master_value while dragging)
+	var gain = clamp(master_value, 0, 1);
+	audio_master_gain(gain);
 	// 5) Define the slider TRACK where the knob center is allowed to move
 	//    (This prevents the knob from hanging off the bar edges)
 	var track_left_center  = bar_x + knob_width * 0.5;

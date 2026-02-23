@@ -8,7 +8,7 @@
     "children":[],
     "name":"Default",
   },
-  "defaultScriptType":0,
+  "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Initial Menu Objects","folderPath":"folders/Initial Menu Objects.yy","name":"Initial Menu Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"fonts","folderPath":"folders/Initial Menu Objects/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -17,7 +17,9 @@
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Recording.m4a","CopyToMask":-1,"filePath":"datafiles","name":"Recording.m4a","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -28,9 +30,14 @@
     {"id":{"name":"description_font","path":"fonts/description_font/description_font.yy",},},
     {"id":{"name":"Header_font","path":"fonts/Header_font/Header_font.yy",},},
     {"id":{"name":"UI_font","path":"fonts/UI_font/UI_font.yy",},},
+    {"id":{"name":"obj_audio_controller","path":"objects/obj_audio_controller/obj_audio_controller.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_test_menu","path":"objects/obj_test_menu/obj_test_menu.yy",},},
+    {"id":{"name":"rm_eirene","path":"rooms/rm_eirene/rm_eirene.yy",},},
     {"id":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
+    {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"id":{"name":"music_set","path":"scripts/music_set/music_set.yy",},},
+    {"id":{"name":"loop_track","path":"sounds/loop_track/loop_track.yy",},},
     {"id":{"name":"menu_back_arrow","path":"sprites/menu_back_arrow/menu_back_arrow.yy",},},
     {"id":{"name":"menu_background","path":"sprites/menu_background/menu_background.yy",},},
     {"id":{"name":"menu_column_header","path":"sprites/menu_column_header/menu_column_header.yy",},},
@@ -47,6 +54,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
+    {"roomId":{"name":"rm_eirene","path":"rooms/rm_eirene/rm_eirene.yy",},},
+    {"roomId":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

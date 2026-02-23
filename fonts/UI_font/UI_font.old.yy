@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"UI_font",
   "parent":{
-    "name":"Initial Menu Objects",
-    "path":"folders/Initial Menu Objects.yy",
+    "name":"fonts",
+    "path":"folders/Initial Menu Objects/fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

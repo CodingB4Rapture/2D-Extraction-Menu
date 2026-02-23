@@ -146,7 +146,8 @@ else if (menu_screen == MenuScreen.SETTINGS)
 
 	// 1) BAR anchor (THIS stays constant)
 	var master_bar_x = 198;
-	var master_bar_y = 208;
+	var master_bar_y = 216;
+	bar_knob_y_padding = 48;
 
 	// 2) Convert master_value (0..1.20) into knob travel (0..1)
 	var knob_travel = (master_value - master_min) / (master_max - master_min);
@@ -170,39 +171,52 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	var knob_draw_x = knob_center_x - knob_width * 0.5 + sprite_get_xoffset(menu_settings_knob);
 	var knob_draw_y = knob_center_y - knob_height * 0.5 + sprite_get_yoffset(menu_settings_knob); 
 	// Tweak this until it sits perfectly on the bar
-	knob_draw_y += master_knob_y_offset;
-	knob_draw_x += master_knob_x_offset;
-
-	bar_knob_y_padding = 48;
 	
-	// 5) Draw
-	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y);
-	draw_sprite(menu_settings_knob, 0, knob_draw_x, knob_draw_y);
-	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y + bar_knob_y_padding);
-	draw_sprite(menu_settings_knob, 0, knob_draw_x, knob_draw_y + bar_knob_y_padding);
-	 
-	
-	//Shadow
-	draw_set_color(c_dkgrey);
-	draw_text(first_header_x - 70, column_header_y - 28, "AUDIO"); 
-	draw_text(second_header_x - 102, column_header_y - 28, "GRAPHICS"); 
-	
-	draw_text(third_header_x - 110, column_header_y - 28, "CONTROLS"); 
-	draw_text(fourth_header_x - 70, column_header_y - 28, "ACCESS"); 
-	
-    
-	draw_set_font(UI_font);
+	draw_set_font(description_font); 
 	draw_set_color(c_silver);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	
+	draw_text(master_bar_x - 108, master_bar_y - 42, "Master Volume");
+	
+	
+	knob_draw_y += master_knob_y_offset;
+	knob_draw_x += master_knob_x_offset;
+
+	
+	
+	
+
+	// 5) Draw
+	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y);
+	draw_sprite(menu_settings_knob, 0, knob_draw_x, knob_draw_y);
+
+	draw_set_font(UI_font);
+	draw_set_color(c_silver);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	//text anchor for proper spacing between column naming sections
+	var anchor_offset_y = 14; 
+	//Shadow
+	draw_set_color(c_dkgrey);
+	draw_text(first_header_x - 58 , column_header_y - anchor_offset_y, "AUDIO"); 
+	draw_text(second_header_x - 90, column_header_y - anchor_offset_y, "GRAPHICS"); 
+	
+	draw_text(third_header_x - 90, column_header_y - anchor_offset_y, "CONTROLS"); 
+	draw_text(fourth_header_x - 68, column_header_y - anchor_offset_y, "ACCESS"); 
+	
+	draw_set_color(c_silver);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+    
+
 	var header_text_padding_x = 20;
 	var header_text_padding_y = 14; 
-	draw_text(first_header_x - 72, column_header_y - 28, "AUDIO"); 
-	draw_text(second_header_x - 104, column_header_y - 28, "GRAPHICS"); 
+	draw_text(first_header_x - 56, column_header_y - anchor_offset_y, "AUDIO"); 
+	draw_text(second_header_x - 88, column_header_y - anchor_offset_y, "GRAPHICS"); 
 	
-	draw_text(third_header_x - 112, column_header_y - 28, "CONTROLS"); 
-	draw_text(fourth_header_x - 72, column_header_y - 28, "ACCESS"); 
+	draw_text(third_header_x - 88, column_header_y - anchor_offset_y, "CONTROLS"); 
+	draw_text(fourth_header_x - 66, column_header_y - anchor_offset_y, "ACCESS"); 
 	
 	//Draw game title
 	draw_set_font(Header_font); 
