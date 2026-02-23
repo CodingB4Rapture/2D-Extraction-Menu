@@ -42,7 +42,7 @@ selected_button_index = -1;
 
 //button list for main menu screen for first initial screen
 buttons = [
-	{ //Deploy button
+	{ //Play Game button
 		spr: menu_UI_Button,
 		x: 80, y: 160,
 		width: sprite_get_width(menu_UI_Button),
@@ -51,7 +51,7 @@ buttons = [
 		description: "Go on a Deployment.",
 		action: MenuAction.PLAY_GAME
 	},
-	{ // Loudout button
+	{ // Loadout button
 		spr: menu_UI_Button,
 		x: 80, y: 240,
 		width: sprite_get_width(menu_UI_Button),
