@@ -119,9 +119,18 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 	var knob_draw_y = knob_center_y - knob_height * 0.5 + sprite_get_yoffset(menu_settings_knob) + master_knob_y_offset;
 
 	// 8) Check if the mouse is currently over the knob (clickable area)
-	var mouse_over_knob =
-	    (mouse_x_gui >= knob_draw_x) && (mouse_x_gui < knob_draw_x + knob_width) &&
-	    (mouse_y_gui >= knob_draw_y) && (mouse_y_gui < knob_draw_y + knob_height);
+
+
+	// knob_draw_x / knob_draw_y are the coordinates you pass to draw_sprite()
+	// For hit detection, we need the top-left corner of the sprite on screen:
+	var knob_left   = knob_draw_x - sprite_get_xoffset(menu_settings_knob);
+	var knob_top    = knob_draw_y - sprite_get_yoffset(menu_settings_knob);
+	var knob_right  = knob_left + knob_width;
+	var knob_bottom = knob_top + knob_height;
+
+var mouse_over_knob =
+    (mouse_x_gui >= knob_left) && (mouse_x_gui < knob_right) &&
+    (mouse_y_gui >= knob_top)  && (mouse_y_gui < knob_bottom);
 
 	// 9) Start dragging only if the user clicks ON the knob
 	if (mouse_over_knob && mouse_check_button_pressed(mb_left))
@@ -138,11 +147,12 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 	// 11) While dragging, map mouse X position back into a new slider value
 	if (master_dragging)
 	{
-	    // Convert mouse X into 0..1 across the track
-	    var new_percent = (mouse_x_gui - track_left_center) / (track_right_center - track_left_center);
-	    new_percent = clamp(new_percent, 0, 1);
+	var visual_left  = track_left_center  + master_knob_x_offset;
+	var visual_right = track_right_center + master_knob_x_offset;
 
-	    // Convert 0..1 percent into actual value 0..1.20
-	    master_value = lerp(master_min, master_max, new_percent);
+	var new_percent = (mouse_x_gui - visual_left) / (visual_right - visual_left);
+	new_percent = clamp(new_percent, 0, 1);
+
+	master_value = lerp(master_min, master_max, new_percent);
 	}
 }

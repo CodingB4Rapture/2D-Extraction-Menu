@@ -170,10 +170,8 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	var knob_draw_x = knob_center_x - knob_width * 0.5 + sprite_get_xoffset(menu_settings_knob);
 	var knob_draw_y = knob_center_y - knob_height * 0.5 + sprite_get_yoffset(menu_settings_knob); 
 	// Tweak this until it sits perfectly on the bar
-	var knob_y_offset = -8;   // try -6, then adjust: -4, -8, etc.
-	knob_draw_y += knob_y_offset;
-	var knob_x_offset = -100;
-	knob_draw_x += knob_x_offset;
+	knob_draw_y += master_knob_y_offset;
+	knob_draw_x += master_knob_x_offset;
 
 	// 5) Draw
 	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y);
