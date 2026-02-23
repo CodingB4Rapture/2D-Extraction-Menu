@@ -144,10 +144,25 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	//Music Coloumn 
 	var master_volume_slider_y = 208;
 	var master_volume_slider_x = 198;
+	var master_bar_y = 208;
+	var master_bar_x = 108;
+	//convert value for 0-1.20 into a 0..1 travel percentage to move knob
+	var knob_travel = (master_value - master_min) / (master_max - master_min);
+	knob_travel = clamp(knob_travel, 0, 1); 
+	
+	//getting the width of var and knob
+	var bar_width = sprite_get_width(menu_setting_slider);
+	var knob_width = sprite_get_width(menu_settings_knob); 
+	//tracking limits so know doesn't hangoff the ends 
+	var track_left = master_bar_x;
+	var track_right = master_bar_x + bar_width - knob_width;
+	//knob positions based on slider values
+	var master_knob_x = lerp(track_left, track_right, knob_travel);
+	var master_knob_y = master_bar_y;
 	
 	//drawing the sprites 
-	draw_sprite(menu_setting_slider, 0, master_volume_slider_x, master_volume_slider_y);
-	
+	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y);
+	draw_sprite(menu_settings_knob, 0, master_knob_x, master_knob_y); 
 	
 	//Shadow
 	draw_set_color(c_dkgrey);

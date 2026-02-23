@@ -1,5 +1,13 @@
 display_set_gui_size(1280, 720);
 
+//Sound Settings
+master_min = 0.0; 
+master_max = 1.20; 
+master_value = 0.00;
+master_dragging = false; 
+
+
+
 title_text = "2D EXTRACTION TO EIRENE"; //change to final name later
 title_x = 1280 * 0.5; //this will center my X axis 
 title_y = 12; //top padding 
