@@ -173,9 +173,13 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	knob_draw_y += master_knob_y_offset;
 	knob_draw_x += master_knob_x_offset;
 
+	bar_knob_y_padding = 48;
+	
 	// 5) Draw
 	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y);
 	draw_sprite(menu_settings_knob, 0, knob_draw_x, knob_draw_y);
+	draw_sprite(menu_setting_slider, 0, master_bar_x, master_bar_y + bar_knob_y_padding);
+	draw_sprite(menu_settings_knob, 0, knob_draw_x, knob_draw_y + bar_knob_y_padding);
 	 
 	
 	//Shadow
@@ -220,7 +224,7 @@ else if (menu_screen == MenuScreen.SETTINGS)
 	
     
 
-    // --- We'll draw checkbox + slider next ---
+    
     
     exit; // IMPORTANT: prevents your MAIN draw code from running underneath
 }
