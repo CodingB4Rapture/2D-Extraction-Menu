@@ -260,6 +260,62 @@ else if (menu_screen == MenuScreen.CLASS_INFO) {
 		// Main menu background panels (used to be on room asset layer)
 	draw_sprite(menu_UI_Left_Panel,  0,  60, 136);
 	draw_sprite(menu_UI_Right_Panel, 0, 624, 136);
+	
+		for (var button_index = 0; button_index < array_length(class_info_buttons); button_index++)
+	{
+	    var button = class_info_buttons[button_index];
+
+	    var is_hovered = (button_index == hovered_button_index);
+
+	    var frame = 0;
+	    if (is_hovered) frame = 1;
+
+	    var draw_x = button.x;
+	    var draw_y = button.y;
+
+	    if (is_hovered) draw_y += -4;
+
+	    draw_sprite(button.spr, frame, draw_x, draw_y);
+
+	    draw_set_font(UI_font);
+	    draw_set_halign(fa_center);
+	    draw_set_valign(fa_middle);
+
+	    var center_x = draw_x + button.width * 0.5;
+	    var center_y = draw_y + button.height * 0.5;
+
+	    draw_set_color(c_black);
+	    draw_text(center_x + 2, center_y + 2, button.label);
+
+	    draw_set_color(c_silver);
+	    draw_text(center_x, center_y, button.label);
+	}
+
+	// Right panel description (hover wins, else selected)
+	var desc_text = "Hover a button to see details.";
+
+	if (hovered_button_index != -1)
+	{
+	    desc_text = class_info_buttons[hovered_button_index].description;
+	}
+	else if (selected_button_index != -1)
+	{
+	    desc_text = class_info_buttons[selected_button_index].description;
+	}
+
+	draw_set_font(UI_font);
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_color(c_silver); //UI text
+
+
+	draw_set_font(UI_font);
+	draw_set_font(description_font);
+	// auto line spacing: font size + a little breathing room
+	var line_spacing = font_get_size(description_font) + 2;
+
+	draw_text_ext(description_x, description_y, desc_text, line_spacing, description_width);
+
 		//Draw game title
 	draw_set_font(Header_font); 
 	draw_set_halign(fa_center);
@@ -277,5 +333,10 @@ else if (menu_screen == MenuScreen.CLASS_INFO) {
 	var back_frame = back_button_hover ? 1 : 0;
 	draw_sprite(menu_back_arrow, back_frame, back_button_x + 8, back_button_y + 8);
 		// Header text uses the stencil font
+	
+
+
+
+
 	
 }

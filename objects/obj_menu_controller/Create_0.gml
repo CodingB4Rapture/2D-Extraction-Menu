@@ -34,17 +34,19 @@ back_button_width = sprite_get_width(menu_back_arrow);
 back_button_height = sprite_get_height(menu_back_arrow); 
 back_button_label = "BACK"; //didnt end up using label.. arrow is kind of self-explanitory
 
-enum MenuAction {PLAY_GAME, LOADOUT, SETTINGS, CLASS_INFO, QUIT}
+enum MenuAction {PLAY_GAME, LOADOUT, SETTINGS, CLASS_INFO, QUIT};
 
 //which button is being hovered or selec. This will matter on how things look
 hovered_button_index = -1; 
 selected_button_index = -1; 
 
 //button list for main menu screen for first initial screen
+button_increment = 80; 
+button_y = 80; 
 buttons = [
 	{ // Play Game button
 		spr: menu_UI_Button,
-		x: 80, y: 160,
+		x: button_increment, y: 80 + button_increment,
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button),
 		label: "PLAY GAME",
@@ -53,7 +55,7 @@ buttons = [
 	},
 	{ // Loadout button
 		spr: menu_UI_Button,
-		x: 80, y: 240,
+		x: button_increment, y: 160 + button_increment,
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button),
 		label: "LOADOUT",
@@ -62,7 +64,7 @@ buttons = [
 	},
 	{ // Settings Button
 		spr: menu_UI_Button,
-		x: 80, y: 320,
+		x: button_increment, y: 240 + button_increment,
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button),
 		label: "SETTINGS",
@@ -71,7 +73,7 @@ buttons = [
 	},
 	{ // About Our Team button
 		spr: menu_UI_Button,
-		x: 80, y: 400,
+		x: button_increment, y: 320 + button_increment,
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button),
 		label: "CLASS INFO",
@@ -87,6 +89,44 @@ buttons = [
 		description: "Quit the Game. Thanks for playing.",
 		action: MenuAction.QUIT
 	},
+];
+
+enum ClassButtons {BUSHCRAFTER, MECHANIC, MEDIC, SHAREDTRAITS}; 
+
+class_info_buttons = [
+	{	spr: menu_UI_Button, 
+		x: button_increment, y: 80 + button_increment,
+		width: sprite_get_width(menu_UI_Button),
+		height: sprite_get_height(menu_UI_Button), 
+		label: "BUSHCRAFTER", 
+		description: "TBD",
+		action: ClassButtons.BUSHCRAFTER
+	},
+	{	spr: menu_UI_Button, 
+		x: button_increment, y: 160 + button_increment,
+		width: sprite_get_width(menu_UI_Button),
+		height: sprite_get_height(menu_UI_Button), 
+		label: "MECHANIC", 
+		description: "TBD",
+		action: ClassButtons.MECHANIC
+	},
+	{	spr: menu_UI_Button, 
+		x: button_increment, y: 240 + button_increment,
+		width: sprite_get_width(menu_UI_Button),
+		height: sprite_get_height(menu_UI_Button), 
+		label: "MEDIC", 
+		description: "TBD",
+		action: ClassButtons.MEDIC
+	},
+	{	spr: menu_UI_Button, 
+		x: button_increment, y: 320 + button_increment,
+		width: sprite_get_width(menu_UI_Button),
+		height: sprite_get_height(menu_UI_Button), 
+		label: "SHARED TRAITS", 
+		description: "TBD",
+		action: ClassButtons.SHAREDTRAITS
+	},
+	
 ];
 
 //right panel text box area (this is where I'll edit my text for descriptions)

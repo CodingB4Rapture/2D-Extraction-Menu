@@ -157,8 +157,40 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 
 	master_value = lerp(master_min, master_max, new_percent);
 	}
-}
-else if (menu_screen == MenuScreen.CLASS_INFO) {
+} else if (menu_screen == MenuScreen.CLASS_INFO) {
+	// assume no hover
+	hovered_button_index = -1;
+
+	// find hovered button (first match wins)
+	for (var button_index = 0; button_index < array_length(class_info_buttons); button_index++)
+	{
+	    var button = class_info_buttons[button_index];
+
+	    var inside_left   = (mymouse_x >= button.x);
+	    var inside_right  = (mymouse_x <  button.x + button.width);
+	    var inside_top    = (mymouse_y >= button.y);
+	    var inside_bottom = (mymouse_y <  button.y + button.height);
+
+	    if (inside_left && inside_right && inside_top && inside_bottom)
+	    {
+	        hovered_button_index = button_index;
+	        break;
+	    }
+	}
+
+	// click activates
+	if (hovered_button_index != -1 && mouse_check_button_pressed(mb_left))
+	{
+	    selected_button_index = hovered_button_index;
+
+	    var action = class_info_buttons[selected_button_index].action;
+
+	    if (action == ClassButtons.BUSHCRAFTER)            show_debug_message("BUSHCRAFTER clicked");
+	    else if (action == ClassButtons.MECHANIC)      show_debug_message("Mechanic clicked");
+	    else if (action == ClassButtons.MEDIC)     show_debug_message("Medic Clicked");
+	    else if (action == ClassButtons.SHAREDTRAITS)	show_debug_message("Shared traits clicked");
+	  
+	}
 	// --------------------------------------------
 	// BACK BUTTON HOVER (human readable version)
 	// --------------------------------------------
