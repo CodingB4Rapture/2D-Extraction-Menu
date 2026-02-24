@@ -34,7 +34,7 @@ if (menu_screen == MenuScreen.MAIN)
 	    if (action == MenuAction.PLAY_GAME)            show_debug_message("PLAY GAME clicked");
 	    else if (action == MenuAction.LOADOUT)      show_debug_message("LOADOUT clicked");
 	    else if (action == MenuAction.SETTINGS)     menu_screen = MenuScreen.SETTINGS;//should I go to SETTINGS room here?
-	    else if (action == MenuAction.ABOUT_OUR_TEAM) show_debug_message("ABOUT clicked");
+	    else if (action == MenuAction.CLASS_INFO)	menu_screen = MenuScreen.CLASS_INFO;
 	    else if (action == MenuAction.QUIT)         game_end();
 	}
 }
@@ -156,5 +156,48 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 	new_percent = clamp(new_percent, 0, 1);
 
 	master_value = lerp(master_min, master_max, new_percent);
+	}
+}
+else if (menu_screen == MenuScreen.CLASS_INFO) {
+	// --------------------------------------------
+	// BACK BUTTON HOVER (human readable version)
+	// --------------------------------------------
+
+	// We'll calculate a hover rectangle that matches the visible arrow,
+	// not the full sprite size (which may include transparent padding).
+
+	var spr = menu_back_arrow;
+
+	// 1) Get the visible bounding box of the sprite (in sprite coordinates)
+	var arrow_left   = sprite_get_bbox_left(spr);
+	var arrow_top    = sprite_get_bbox_top(spr);
+	var arrow_right  = sprite_get_bbox_right(spr);
+	var arrow_bottom = sprite_get_bbox_bottom(spr);
+
+	// 2) Get the sprite's origin offset (also in sprite coordinates)
+	var origin_x = sprite_get_xoffset(spr);
+	var origin_y = sprite_get_yoffset(spr);
+
+	// 3) Convert that bounding box into GUI-space coordinates
+	//    back_button_x/back_button_y is where you DRAW the sprite.
+	//    The origin matters, so we subtract origin to align correctly.
+	var hover_left   = back_button_x + (arrow_left   - origin_x);
+	var hover_top    = back_button_y + (arrow_top    - origin_y);
+	var hover_right  = back_button_x + (arrow_right  - origin_x);
+	var hover_bottom = back_button_y + (arrow_bottom - origin_y);
+
+	// 4) Check if the mouse is inside that hover rectangle
+	var mouse_over_back =
+	    (mymouse_x >= hover_left) && (mymouse_x < hover_right) &&
+	    (mymouse_y >= hover_top)  && (mymouse_y < hover_bottom);
+
+	// 5) Store hover state for drawing (frame 0 vs 1)
+	back_button_hover = mouse_over_back;
+
+	// 6) If clicked while hovering, go back to MAIN
+	if (mouse_over_back && mouse_check_button_pressed(mb_left))
+	{
+	    menu_screen = MenuScreen.MAIN;
+	    exit;
 	}
 }

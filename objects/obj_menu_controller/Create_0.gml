@@ -21,7 +21,7 @@ footer_y = 672;
 
 
 //enumerator for menu screen and WHERE I'm at
-enum MenuScreen { MAIN, SETTINGS }
+enum MenuScreen { MAIN, SETTINGS, CLASS_INFO }
 menu_screen = MenuScreen.MAIN;
 set_fullscreen = window_get_fullscreen();
 set_master = 0.80; //0..1 for now
@@ -34,7 +34,7 @@ back_button_width = sprite_get_width(menu_back_arrow);
 back_button_height = sprite_get_height(menu_back_arrow); 
 back_button_label = "BACK"; //didnt end up using label.. arrow is kind of self-explanitory
 
-enum MenuAction {PLAY_GAME, LOADOUT, SETTINGS, ABOUT_OUR_TEAM, QUIT}
+enum MenuAction {PLAY_GAME, LOADOUT, SETTINGS, CLASS_INFO, QUIT}
 
 //which button is being hovered or selec. This will matter on how things look
 hovered_button_index = -1; 
@@ -42,7 +42,7 @@ selected_button_index = -1;
 
 //button list for main menu screen for first initial screen
 buttons = [
-	{ //Play Game button
+	{ // Play Game button
 		spr: menu_UI_Button,
 		x: 80, y: 160,
 		width: sprite_get_width(menu_UI_Button),
@@ -69,16 +69,16 @@ buttons = [
 		description: "Adjust your game and sound settings.",
 		action: MenuAction.SETTINGS
 	},
-	{ //About Our Team button
+	{ // About Our Team button
 		spr: menu_UI_Button,
 		x: 80, y: 400,
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button),
 		label: "CLASS INFO",
-		description: " \tBushcrafter:\n \n Resourceful Hunter \n\n \tMechanic:\n\n Clunky Scrapper and fixerupper \n\n \tMedic: \n\n Hopefully they'll heal you.",
-		action: MenuAction.ABOUT_OUR_TEAM
+		description: " \tBushcrafter:\n \n Resourceful Hunter, mid speed, quiet \n\n \tMechanic:\n\n Clunky Scrapper and fixerupper, slower \n\n \tMedic: \n\n Hopefully they'll heal you. Light on their feet",
+		action: MenuAction.CLASS_INFO
 	},
-	{ //Quit Button
+	{ // Quit Button
 		spr: menu_UI_Button,
 		x: 80, y: 480,
 		width: sprite_get_width(menu_UI_Button),

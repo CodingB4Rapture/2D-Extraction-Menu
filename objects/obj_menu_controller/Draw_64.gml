@@ -242,3 +242,40 @@ else if (menu_screen == MenuScreen.SETTINGS)
     
     exit; // IMPORTANT: prevents your MAIN draw code from running underneath
 }
+else if (menu_screen == MenuScreen.CLASS_INFO) {
+	
+	//Draw game title
+	draw_set_font(Header_font); 
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+
+	//Shadow
+	draw_set_color(c_dkgray);
+	draw_text(title_x + 2, title_y + 30, title_text); 
+
+	//main
+	draw_set_color(c_silver);
+	draw_text(title_x, title_y + 32, title_text); 
+	
+		// Main menu background panels (used to be on room asset layer)
+	draw_sprite(menu_UI_Left_Panel,  0,  60, 136);
+	draw_sprite(menu_UI_Right_Panel, 0, 624, 136);
+		//Draw game title
+	draw_set_font(Header_font); 
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+
+	//Shadow
+	draw_set_color(c_dkgrey);
+	draw_text(footer_x + 2, footer_y + 2, footer_text); 
+
+	//main
+	draw_set_color(c_silver);
+	draw_text(footer_x, footer_y, footer_text); 
+	
+	// --- BACK button ---
+	var back_frame = back_button_hover ? 1 : 0;
+	draw_sprite(menu_back_arrow, back_frame, back_button_x + 8, back_button_y + 8);
+		// Header text uses the stencil font
+	
+}
