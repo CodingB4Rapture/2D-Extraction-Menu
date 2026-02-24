@@ -99,7 +99,7 @@ class_info_buttons = [
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button), 
 		label: "BUSHCRAFTER", 
-		description: "TBD",
+		description: "            The Bushcrafter\n\n Has a walk speed of: 1.0 \n\n Can collect:\n\n Fibers, Herbs, Rocks, Stones ",
 		action: ClassButtons.BUSHCRAFTER
 	},
 	{	spr: menu_UI_Button, 

@@ -157,10 +157,12 @@ else if (menu_screen == MenuScreen.SETTINGS) {
 
 	master_value = lerp(master_min, master_max, new_percent);
 	}
-} else if (menu_screen == MenuScreen.CLASS_INFO) {
+} 
+else if (menu_screen == MenuScreen.CLASS_INFO) {
 	// assume no hover
 	hovered_button_index = -1;
-
+	
+	selected_button_index = -1;
 	// find hovered button (first match wins)
 	for (var button_index = 0; button_index < array_length(class_info_buttons); button_index++)
 	{
