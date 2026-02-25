@@ -21,5 +21,6 @@
     {"name":"menu_UI_checkbox","order":8,"path":"sprites/menu_UI_checkbox/menu_UI_checkbox.yy",},
     {"name":"menu_UI_Left_Panel","order":2,"path":"sprites/menu_UI_Left_Panel/menu_UI_Left_Panel.yy",},
     {"name":"menu_UI_Right_Panel","order":3,"path":"sprites/menu_UI_Right_Panel/menu_UI_Right_Panel.yy",},
+    {"name":"placeholder_background","order":9,"path":"sprites/placeholder_background/placeholder_background.yy",},
   ],
 }

@@ -49,6 +49,7 @@
     {"id":{"name":"menu_UI_checkbox","path":"sprites/menu_UI_checkbox/menu_UI_checkbox.yy",},},
     {"id":{"name":"menu_UI_Left_Panel","path":"sprites/menu_UI_Left_Panel/menu_UI_Left_Panel.yy",},},
     {"id":{"name":"menu_UI_Right_Panel","path":"sprites/menu_UI_Right_Panel/menu_UI_Right_Panel.yy",},},
+    {"id":{"name":"placeholder_background","path":"sprites/placeholder_background/placeholder_background.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
