@@ -2,6 +2,8 @@
   "FolderOrderSettings":[
     {"name":"fonts","order":1,"path":"folders/Initial Menu Objects/fonts.yy",},
     {"name":"menu sprites","order":2,"path":"folders/Initial Menu Objects/menu sprites.yy",},
+    {"name":"Player Stuff","order":11,"path":"folders/Player Stuff.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Player Stuff/Sprites.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"Header_font","order":1,"path":"fonts/Header_font/Header_font.yy",},
