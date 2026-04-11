@@ -31,7 +31,7 @@ if (menu_screen == MenuScreen.MAIN)
 
 	    var action = buttons[selected_button_index].action;
 
-	    if (action == MenuAction.PLAY_GAME)            show_debug_message("PLAY GAME clicked");
+	    if (action == MenuAction.PLAY_GAME)         room_goto(rm_eirene);
 	    else if (action == MenuAction.LOADOUT)      menu_screen = MenuScreen.LOADOUT;
 	    else if (action == MenuAction.SETTINGS)     menu_screen = MenuScreen.SETTINGS;//should I go to SETTINGS room here?
 	    else if (action == MenuAction.CLASS_INFO)	menu_screen = MenuScreen.CLASS_INFO;
