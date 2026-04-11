@@ -23,7 +23,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"2D Extraction Menu",
   "resources":[
@@ -35,7 +35,7 @@
     {"id":{"name":"obj_test_menu","path":"objects/obj_test_menu/obj_test_menu.yy",},},
     {"id":{"name":"rm_eirene","path":"rooms/rm_eirene/rm_eirene.yy",},},
     {"id":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
-    {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"id":{"name":"rm_valley","path":"rooms/rm_valley/rm_valley.yy",},},
     {"id":{"name":"music_set","path":"scripts/music_set/music_set.yy",},},
     {"id":{"name":"loop_track","path":"sounds/loop_track/loop_track.yy",},},
     {"id":{"name":"menu_back_arrow","path":"sprites/menu_back_arrow/menu_back_arrow.yy",},},
@@ -56,7 +56,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
     {"roomId":{"name":"rm_eirene","path":"rooms/rm_eirene/rm_eirene.yy",},},
-    {"roomId":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"roomId":{"name":"rm_valley","path":"rooms/rm_valley/rm_valley.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

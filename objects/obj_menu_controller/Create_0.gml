@@ -21,7 +21,7 @@ footer_y = 672;
 
 
 //enumerator for menu screen and WHERE I'm at
-enum MenuScreen { MAIN, SETTINGS, CLASS_INFO }
+enum MenuScreen { MAIN, SETTINGS, CLASS_INFO, LOADOUT }
 menu_screen = MenuScreen.MAIN;
 set_fullscreen = window_get_fullscreen();
 set_master = 0.80; //0..1 for now
