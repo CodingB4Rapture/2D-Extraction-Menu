@@ -1,3 +1,12 @@
+// PERF DEBUG (temporary)
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+
+var dbg_y = 8;
+
+
+draw_text(8, dbg_y, "inst(all): " + string(instance_number(all))); dbg_y += 100;
 if (menu_screen == MenuScreen.MAIN)
 {
 	
