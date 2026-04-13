@@ -13,6 +13,9 @@
     {"$GMFolder":"","%Name":"Initial Menu Objects","folderPath":"folders/Initial Menu Objects.yy","name":"Initial Menu Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"fonts","folderPath":"folders/Initial Menu Objects/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"menu sprites","folderPath":"folders/Initial Menu Objects/menu sprites.yy","name":"menu sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Player Stuff","folderPath":"folders/Player Stuff.yy","name":"Player Stuff","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Player Stuff/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Player Stuff/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
@@ -23,7 +26,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"2D Extraction Menu",
   "resources":[
@@ -32,10 +35,11 @@
     {"id":{"name":"UI_font","path":"fonts/UI_font/UI_font.yy",},},
     {"id":{"name":"obj_audio_controller","path":"objects/obj_audio_controller/obj_audio_controller.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_test_menu","path":"objects/obj_test_menu/obj_test_menu.yy",},},
     {"id":{"name":"rm_eirene","path":"rooms/rm_eirene/rm_eirene.yy",},},
     {"id":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
-    {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"id":{"name":"rm_valley","path":"rooms/rm_valley/rm_valley.yy",},},
     {"id":{"name":"music_set","path":"scripts/music_set/music_set.yy",},},
     {"id":{"name":"loop_track","path":"sounds/loop_track/loop_track.yy",},},
     {"id":{"name":"menu_back_arrow","path":"sprites/menu_back_arrow/menu_back_arrow.yy",},},
@@ -50,13 +54,14 @@
     {"id":{"name":"menu_UI_Left_Panel","path":"sprites/menu_UI_Left_Panel/menu_UI_Left_Panel.yy",},},
     {"id":{"name":"menu_UI_Right_Panel","path":"sprites/menu_UI_Right_Panel/menu_UI_Right_Panel.yy",},},
     {"id":{"name":"placeholder_background","path":"sprites/placeholder_background/placeholder_background.yy",},},
+    {"id":{"name":"spr_player_block","path":"sprites/spr_player_block/spr_player_block.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_start_menu","path":"rooms/rm_start_menu/rm_start_menu.yy",},},
     {"roomId":{"name":"rm_eirene","path":"rooms/rm_eirene/rm_eirene.yy",},},
-    {"roomId":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"roomId":{"name":"rm_valley","path":"rooms/rm_valley/rm_valley.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

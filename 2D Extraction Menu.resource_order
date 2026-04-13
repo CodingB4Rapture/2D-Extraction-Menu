@@ -2,13 +2,15 @@
   "FolderOrderSettings":[
     {"name":"fonts","order":1,"path":"folders/Initial Menu Objects/fonts.yy",},
     {"name":"menu sprites","order":2,"path":"folders/Initial Menu Objects/menu sprites.yy",},
+    {"name":"Player Stuff","order":11,"path":"folders/Player Stuff.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Player Stuff/Sprites.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"Header_font","order":1,"path":"fonts/Header_font/Header_font.yy",},
     {"name":"UI_font","order":2,"path":"fonts/UI_font/UI_font.yy",},
     {"name":"obj_audio_controller","order":5,"path":"objects/obj_audio_controller/obj_audio_controller.yy",},
     {"name":"rm_eirene","order":7,"path":"rooms/rm_eirene/rm_eirene.yy",},
-    {"name":"rm_world","order":8,"path":"rooms/rm_world/rm_world.yy",},
+    {"name":"rm_valley","order":8,"path":"rooms/rm_valley/rm_valley.yy",},
     {"name":"music_set","order":6,"path":"scripts/music_set/music_set.yy",},
     {"name":"loop_track","order":4,"path":"sounds/loop_track/loop_track.yy",},
     {"name":"menu_back_arrow","order":5,"path":"sprites/menu_back_arrow/menu_back_arrow.yy",},

@@ -11,7 +11,7 @@ switch (room)
         music_set(loop_track, 0.80, false);
         break;
 
-    case rm_world:
+    case rm_valley:
         music_set(loop_track, 0.75, false);
         break;
 }
