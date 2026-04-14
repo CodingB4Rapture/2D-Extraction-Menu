@@ -56,6 +56,7 @@
     {"id":{"name":"menu_UI_Right_Panel","path":"sprites/menu_UI_Right_Panel/menu_UI_Right_Panel.yy",},},
     {"id":{"name":"placeholder_background","path":"sprites/placeholder_background/placeholder_background.yy",},},
     {"id":{"name":"spr_bg_tile","path":"sprites/spr_bg_tile/spr_bg_tile.yy",},},
+    {"id":{"name":"spr_goldstone_hedge","path":"sprites/spr_goldstone_hedge/spr_goldstone_hedge.yy",},},
     {"id":{"name":"spr_player_block","path":"sprites/spr_player_block/spr_player_block.yy",},},
     {"id":{"name":"spr_portal","path":"sprites/spr_portal/spr_portal.yy",},},
   ],
