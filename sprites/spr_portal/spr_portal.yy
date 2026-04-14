@@ -22,6 +22,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"81b21ec5-35d7-4a5c-8171-b995505244b6","blendMode":0,"displayName":"default","isLocked":false,"name":"81b21ec5-35d7-4a5c-8171-b995505244b6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"36c8ea7a-558e-471e-be26-592dfc36b1c1","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"36c8ea7a-558e-471e-be26-592dfc36b1c1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"58d9074a-bd3f-47d6-b694-a6f39c21079b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"58d9074a-bd3f-47d6-b694-a6f39c21079b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_portal",

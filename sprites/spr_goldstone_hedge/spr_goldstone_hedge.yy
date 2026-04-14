@@ -3,7 +3,7 @@
   "%Name":"spr_goldstone_hedge",
   "bboxMode":0,
   "bbox_bottom":79,
-  "bbox_left":2,
+  "bbox_left":1,
   "bbox_right":94,
   "bbox_top":5,
   "collisionKind":1,
