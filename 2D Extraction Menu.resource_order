@@ -10,6 +10,7 @@
     {"name":"UI_font","order":2,"path":"fonts/UI_font/UI_font.yy",},
     {"name":"obj_audio_controller","order":5,"path":"objects/obj_audio_controller/obj_audio_controller.yy",},
     {"name":"obj_portal","order":1,"path":"objects/obj_portal/obj_portal.yy",},
+    {"name":"obj_sign","order":2,"path":"objects/obj_sign/obj_sign.yy",},
     {"name":"rm_eirene","order":7,"path":"rooms/rm_eirene/rm_eirene.yy",},
     {"name":"rm_valley","order":8,"path":"rooms/rm_valley/rm_valley.yy",},
     {"name":"music_set","order":6,"path":"scripts/music_set/music_set.yy",},
@@ -28,6 +29,7 @@
     {"name":"spr_bg_tile","order":13,"path":"sprites/spr_bg_tile/spr_bg_tile.yy",},
     {"name":"spr_goldstone_hedge","order":14,"path":"sprites/spr_goldstone_hedge/spr_goldstone_hedge.yy",},
     {"name":"spr_portal","order":12,"path":"sprites/spr_portal/spr_portal.yy",},
-    {"name":"Sprite17","order":15,"path":"sprites/Sprite17/Sprite17.yy",},
+    {"name":"spr_sacred_sign","order":16,"path":"sprites/spr_sacred_sign/spr_sacred_sign.yy",},
+    {"name":"spr_stone_portal","order":15,"path":"sprites/spr_stone_portal/spr_stone_portal.yy",},
   ],
 }

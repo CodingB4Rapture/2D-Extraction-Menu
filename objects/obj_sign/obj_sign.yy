@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_portal",
+  "%Name":"obj_sign",
   "eventList":[],
   "managed":true,
-  "name":"obj_portal",
+  "name":"obj_sign",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_stone_portal",
-    "path":"sprites/spr_stone_portal/spr_stone_portal.yy",
+    "name":"spr_sacred_sign",
+    "path":"sprites/spr_sacred_sign/spr_sacred_sign.yy",
   },
   "spriteMaskId":null,
   "visible":true,
