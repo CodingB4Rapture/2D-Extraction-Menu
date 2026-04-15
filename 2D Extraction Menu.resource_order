@@ -28,5 +28,6 @@
     {"name":"spr_bg_tile","order":13,"path":"sprites/spr_bg_tile/spr_bg_tile.yy",},
     {"name":"spr_goldstone_hedge","order":14,"path":"sprites/spr_goldstone_hedge/spr_goldstone_hedge.yy",},
     {"name":"spr_portal","order":12,"path":"sprites/spr_portal/spr_portal.yy",},
+    {"name":"Sprite17","order":15,"path":"sprites/Sprite17/Sprite17.yy",},
   ],
 }
