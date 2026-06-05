@@ -4,19 +4,10 @@
 // Gideon-style walking character over it.
 // ------------------------------------------------------------
 
-var cam = view_camera[0];
-var view_x = x - 640;
-var view_y = y - 360;
-var view_w = 1280;
-var view_h = 720;
-
-if (camera_exists(cam))
-{
-    view_x = camera_get_view_x(cam);
-    view_y = camera_get_view_y(cam);
-    view_w = camera_get_view_width(cam);
-    view_h = camera_get_view_height(cam);
-}
+var view_x = camera_get_view_x(view_camera[0]);
+var view_y = camera_get_view_y(view_camera[0]);
+var view_w = camera_get_view_width(view_camera[0]);
+var view_h = camera_get_view_height(view_camera[0]);
 
 // ------------------------------------------------------------
 // Fort Valley ground pass. This is here, not Draw Begin, because
