@@ -10,7 +10,7 @@ master_dragging = false;
 master_value = clamp(audio_get_master_gain(0), master_min, master_max);
 
 
-title_text = "2D EXTRACTION TO EIRENE"; //change to final name later
+title_text = "FIRE WATCHERS: SEARCH FOR LIGHT";
 title_x = 1280 * 0.5; //this will center my X axis 
 title_y = 12; //top padding 
 title_scale = 2;
@@ -50,7 +50,7 @@ buttons = [
 		width: sprite_get_width(menu_UI_Button),
 		height: sprite_get_height(menu_UI_Button),
 		label: "PLAY GAME",
-		description: "Go on a Deployment.",
+		description: "Begin in Fort Valley before the fall. Learn movement, read the first orders, and feel the world before the Avalanche.",
 		action: MenuAction.PLAY_GAME
 	},
 	{ // Loadout button
@@ -133,4 +133,3 @@ class_info_buttons = [
 description_x = 720;
 description_y = 170; 
 description_width = 480; //wrap width
-
