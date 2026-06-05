@@ -19,7 +19,9 @@ x += hsp;
 y += vsp;
 
 // update facing direction
-if (hsp != 0 || vsp != 0)
+player_is_moving = (hsp != 0 || vsp != 0);
+
+if (player_is_moving)
 {
     if (abs(hsp) > abs(vsp))
     {
@@ -29,4 +31,16 @@ if (hsp != 0 || vsp != 0)
     {
         facing = (vsp > 0) ? moveDir.DOWN : moveDir.UP;
     }
+
+    walk_anim_timer += 1;
+    if (walk_anim_timer >= walk_anim_speed)
+    {
+        walk_anim_timer = 0;
+        walk_anim_frame = (walk_anim_frame + 1) mod 2;
+    }
+}
+else
+{
+    walk_anim_timer = 0;
+    walk_anim_frame = 0;
 }
