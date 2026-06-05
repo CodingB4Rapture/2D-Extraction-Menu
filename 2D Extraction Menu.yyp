@@ -34,6 +34,7 @@
     {"id":{"name":"Header_font","path":"fonts/Header_font/Header_font.yy",},},
     {"id":{"name":"UI_font","path":"fonts/UI_font/UI_font.yy",},},
     {"id":{"name":"obj_audio_controller","path":"objects/obj_audio_controller/obj_audio_controller.yy",},},
+    {"id":{"name":"obj_fort_valley_controller","path":"objects/obj_fort_valley_controller/obj_fort_valley_controller.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_portal","path":"objects/obj_portal/obj_portal.yy",},},
