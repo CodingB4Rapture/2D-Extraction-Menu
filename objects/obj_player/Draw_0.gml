@@ -1,9 +1,74 @@
 // ------------------------------------------------------------
-// Temporary Fire Watchers top-down character renderer
-// Drawn in code so the game can immediately have a walking
-// Gideon-style placeholder without importing sprite sheets yet.
+// Temporary Fire Watchers top-down renderer
+// First draws a Fort Valley-style ground pass, then draws the
+// Gideon-style walking character over it.
 // ------------------------------------------------------------
 
+var cam = view_camera[0];
+var view_x = x - 640;
+var view_y = y - 360;
+var view_w = 1280;
+var view_h = 720;
+
+if (camera_exists(cam))
+{
+    view_x = camera_get_view_x(cam);
+    view_y = camera_get_view_y(cam);
+    view_w = camera_get_view_width(cam);
+    view_h = camera_get_view_height(cam);
+}
+
+// ------------------------------------------------------------
+// Fort Valley ground pass. This is here, not Draw Begin, because
+// Draw Begin did not visibly fire in the current project setup.
+// ------------------------------------------------------------
+var tile = 32;
+var start_x = floor(view_x / tile) * tile - tile;
+var start_y = floor(view_y / tile) * tile - tile;
+var end_x = view_x + view_w + tile;
+var end_y = view_y + view_h + tile;
+
+// deep cold base
+draw_set_color(make_color_rgb(47, 50, 53));
+draw_rectangle(view_x, view_y, view_x + view_w, view_y + view_h, false);
+
+for (var yy = start_y; yy <= end_y; yy += tile)
+{
+    for (var xx = start_x; xx <= end_x; xx += tile)
+    {
+        var checker = ((xx div tile) + (yy div tile)) mod 2;
+        var stone_col = checker == 0 ? make_color_rgb(88, 91, 92) : make_color_rgb(78, 82, 84);
+        var snow_col  = checker == 0 ? make_color_rgb(174, 184, 187) : make_color_rgb(154, 164, 168);
+
+        draw_set_color(stone_col);
+        draw_rectangle(xx, yy, xx + tile, yy + tile, false);
+
+        draw_set_color(make_color_rgb(38, 40, 42));
+        draw_rectangle(xx, yy, xx + tile, yy + 1, false);
+        draw_rectangle(xx, yy, xx + 1, yy + tile, false);
+
+        draw_set_color(make_color_rgb(111, 115, 116));
+        draw_line(xx + 4, yy + 18, xx + 26, yy + 12);
+
+        draw_set_color(snow_col);
+        draw_rectangle(xx + 1, yy + 1, xx + 10, yy + 5, false);
+        draw_rectangle(xx + 22, yy + 25, xx + 31, yy + 31, false);
+    }
+}
+
+// subtle long path lines so Fort Valley feels like an established supply yard
+var old_alpha = draw_get_alpha();
+draw_set_alpha(0.22);
+draw_set_color(make_color_rgb(215, 210, 184));
+for (var path_y = start_y; path_y <= end_y; path_y += 128)
+{
+    draw_line(start_x, path_y, end_x, path_y - 28);
+}
+draw_set_alpha(old_alpha);
+
+// ------------------------------------------------------------
+// Character draw
+// ------------------------------------------------------------
 var s = player_pixel_scale;
 var ox = x - 16 * s;
 var oy = y - 28 * s;
@@ -15,13 +80,12 @@ if (player_is_moving)
 }
 
 // soft ground shadow
-var old_alpha = draw_get_alpha();
+old_alpha = draw_get_alpha();
 draw_set_alpha(0.35);
 draw_set_color(col_shadow);
 draw_ellipse(x - 9 * s, y - 3 * s, x + 9 * s, y + 4 * s, false);
 draw_set_alpha(old_alpha);
 
-// helpers are intentionally simple rectangles for crisp pixel readability
 // boots / legs
 if (facing == moveDir.DOWN || facing == moveDir.UP)
 {
